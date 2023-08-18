@@ -1,9 +1,11 @@
 import React from "react"
+import Header from "./Header"
 
 export default function Error404() {
     return (
-        <div>
-            <h1>404</h1>
-        </div>
+        <main>
+            <Header />
+            <div>404</div>
+        </main>
     )
 } 

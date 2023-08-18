@@ -1,13 +1,11 @@
 import React from "react"
 import Header from "./Header"
 
-import "../styles/Home.scss"
-
-export default function Home() {
+export default function Housing() {
     return (
         <main>
             <Header />
-            <div>This is the home page</div>
+            <div>This is a housing page</div>
         </main>
     )
 } 

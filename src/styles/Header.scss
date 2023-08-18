@@ -1,0 +1,36 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    &__logo {
+        width: 210px;
+        height: 68px;
+    }
+
+    &__nav-bar {
+
+        &__list {
+            display: flex;
+            flex-direction: row;
+            column-gap: 57px;
+        
+            list-style-type: none;
+        }
+
+        &__element {
+            font-size: 24px;
+            font-weight: 500;
+            font-family: 'Montserrat', sans-serif;
+        
+            color: #FF6060;
+            text-decoration: none;
+            
+            &:hover {
+                text-decoration: underline;
+                text-decoration-thickness: 2px;
+            }
+        }
+    }
+}
