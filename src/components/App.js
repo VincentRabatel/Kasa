@@ -1,9 +1,22 @@
-import '../styles/App.css';
+import "../styles/App.css";
+import { Routes, Route } from "react-router-dom";
 
-function App() {
+import Home from "./Home";
+import About from "./About";
+import House from "./House";
+import Error404 from "./Error404";
+
+export default function App() {
   return (
-    <h1>App</h1>
+    <div>
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/house/:id" element={<House />} />
+        <Route path="/*" element={<Error404 />} />
+      </Routes>
+
+    </div>
   );
 }
-
-export default App;
