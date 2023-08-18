@@ -4,10 +4,10 @@ import Footer from "./Footer"
 
 export default function About() {
     return (
-        <main>
+        <React.Fragment>
             <Header />
-            <div>About</div>
+            <main>About</main>
             <Footer />
-        </main>
+        </React.Fragment>
     )
 } 

@@ -6,10 +6,10 @@ import "../styles/Home.scss"
 
 export default function Home() {
     return (
-        <main>
+        <React.Fragment>
             <Header />
-            <div>This is the home page</div>
+            <main>This is the home page</main>
             <Footer />
-        </main>
+        </React.Fragment>
     )
 } 

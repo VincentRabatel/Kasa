@@ -4,10 +4,10 @@ import Footer from "./Footer"
 
 export default function Error404() {
     return (
-        <main>
+        <React.Fragment>
             <Header />
-            <div>404</div>
+            <main>404</main>
             <Footer />
-        </main>
+        </React.Fragment>
     )
 } 

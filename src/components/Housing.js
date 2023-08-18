@@ -4,10 +4,10 @@ import Footer from "./Footer"
 
 export default function Housing() {
     return (
-        <main>
+        <React.Fragment>
             <Header />
-            <div>This is a housing page</div>
+            <main>This is a housing page</main>
             <Footer />
-        </main>
+        </React.Fragment>
     )
 } 
