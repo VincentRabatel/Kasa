@@ -2,6 +2,7 @@ import React from "react"
 import Header from "./Header"
 import Footer from "./Footer"
 import Banner from "./Banner"
+import Collapse from "./Collapse"
 
 import "../styles/About.scss"
 
@@ -17,7 +18,12 @@ export default function About() {
             <main>
                 <Banner image={bannerImage} text={bannerText} alt={bannerAlt} />
 
-                
+                <div className="collapse-container">
+                    <Collapse title="Fiabilité" />
+                    <Collapse title="Respect" />
+                    <Collapse title="Service" />
+                    <Collapse title="Sécurité" />
+                </div>
             </main>
             <Footer />
         </React.Fragment>

@@ -4,6 +4,11 @@ main {
     padding: 0px 100px 0px 100px;
 }
 
-.banner-about {
-    color:yellow;
+.collapse-container {
+    padding: 0px 108px 0px 108px;
+    margin-top: 38px;
+
+    display: flex;
+    flex-direction: column;
+    row-gap: 30px;
 }
