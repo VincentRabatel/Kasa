@@ -1,0 +1,39 @@
+.banner {
+    height: 223px;
+    margin-top: 40px;
+
+    position: relative;
+    text-align: center;
+
+    &__img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 25px;;
+    }
+
+    &__img-overlay {
+        width: 100%;
+        height: 100%;
+
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+
+        opacity: 30%;
+        border-radius: 25px;
+        background-color: black;
+    }
+
+    &__txt {
+        margin: 0;
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+
+        color: white;
+        font-size: 48px;
+        font-weight: 500;
+        font-family: "Montserrat", sans-serif;
+    }
+}
