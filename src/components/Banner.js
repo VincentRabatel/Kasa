@@ -1,14 +1,13 @@
 import React from "react"
 
 import "../styles/Banner.scss"
-import banner from "../assets/banner.jpg"
 
-export default function Banner() {
+export default function Banner({image, text, alt}) {
     return (
         <div className="banner">
-            <img className="banner__img" src={banner} alt="Mountains and sea in the background"></img>
+            <img className="banner__img" src={image} alt={alt}></img>
             <div className="banner__img-overlay"></div>
-            <h1 className="banner__txt">Chez vous, partout et ailleurs</h1>
+            <h1 className="banner__txt">{text}</h1>
         </div>
     );
 }
