@@ -3,7 +3,7 @@ import { Routes, Route } from "react-router-dom";
 
 import Home from "./Home";
 import About from "./About";
-import Housing from "./Housing";
+import Property from "./Property";
 import Error404 from "./Error404";
 
 export default function App() {
@@ -11,7 +11,7 @@ export default function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
-        <Route path="/house/:id" element={<Housing />} />
+        <Route path="/property/:id" element={<Property />} />
         <Route path="/*" element={<Error404 />} />
       </Routes>
   );
