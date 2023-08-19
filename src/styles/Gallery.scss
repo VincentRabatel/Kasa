@@ -1,7 +1,14 @@
 .gallery {
     margin-top: 44px;
-    min-height: 829px; //temp
-
+    padding: 50px;
     border-radius: 25px;
     background-color: #F6F6F6;
+
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+
+    row-gap: 35px;
+    // column-gap: 50px;
 }

@@ -8,7 +8,7 @@ export default function Banner() {
         <div className="banner">
             <img className="banner__img" src={banner} alt="Mountains and sea in the background"></img>
             <div className="banner__img-overlay"></div>
-            <h2 className="banner__txt">Chez vous, partout et ailleurs</h2>
+            <h1 className="banner__txt">Chez vous, partout et ailleurs</h1>
         </div>
     );
 }
