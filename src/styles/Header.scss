@@ -1,4 +1,9 @@
 .header {
+    margin: auto;
+    margin-top: 45px;
+    max-width: 1240px;
+    padding: 0px 100px 0px 100px;
+
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -26,7 +31,7 @@
         
             color: #FF6060;
             text-decoration: none;
-            
+
             &:hover {
                 text-decoration: underline;
                 text-decoration-thickness: 2px;
