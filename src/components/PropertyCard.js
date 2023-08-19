@@ -2,17 +2,12 @@ import React from "react"
 
 import "../styles/PropertyCard.scss"
 
-import propertiesData from "../datas/properties.json"
-
-export default function PropertyCard() {
-    // let properties [];
-
+export default function PropertyCard({id, title, picture}) {
     return (
         <div className="property-card">
+            <img className="property-card__img" src={picture} alt=""></img>
             <div className="property-card__overlay"></div>
-
-
-            <h2 className="property-card__title">Titre de la location</h2>
+            <h2 className="property-card__title">{title}</h2>
         </div>
     );
 }
