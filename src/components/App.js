@@ -1,10 +1,10 @@
 import "../styles/App.scss";
 import { Routes, Route } from "react-router-dom";
 
-import Home from "./Home";
-import About from "./About";
-import Property from "./Property";
-import Error404 from "./Error404";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Property from "./pages/Property";
+import Error404 from "./pages/Error404";
 
 export default function App() {
   return (

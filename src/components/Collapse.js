@@ -10,12 +10,10 @@ export default function Collapse({title, text}) {
         switch(collapseState) {
             case false:
                 setCollapseState(true);
-                console.log("Was false, going to true")
             break;
     
             case true:
                 setCollapseState(false); 
-                console.log("Was true, going to false")
             break;
     
             default:

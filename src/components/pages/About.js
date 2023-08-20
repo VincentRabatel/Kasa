@@ -1,13 +1,13 @@
 import React from "react"
-import Header from "./Header"
-import Footer from "./Footer"
-import Banner from "./Banner"
-import Collapse from "./Collapse"
+import Header from "../Header"
+import Footer from "../Footer"
+import Banner from "../Banner"
+import Collapse from "../Collapse"
 
-import "../styles/About.scss"
+import "./About.scss"
 
 // Data to setup the banner
-import bannerImage from "../assets/banner-about.jpg"
+import bannerImage from "../../assets/banner-about.jpg"
 const bannerText = ""
 const bannerAlt = "Mountains and a river in the background"
 
