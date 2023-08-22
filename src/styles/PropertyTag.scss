@@ -1,0 +1,19 @@
+.property-tag {
+    height: 25px;
+    min-width: 115px;
+    padding : 0px 10px 0px 10px;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 10px;
+    background-color: #FF6060;
+
+    &__text {
+        color: white;
+        font-size: 14px;
+        font-weight: 500;
+        font-family: "Montserrat", sans-serif;
+    }
+}

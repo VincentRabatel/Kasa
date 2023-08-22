@@ -7,6 +7,7 @@ import Collapse from "../Collapse"
 import "./Property.scss"
 
 import propertiesData from "../../datas/properties.json"
+import PropertyTag from "../PropertyTag"
 
 export default function Property() {
     const id = getPropertyIDFromUrl();
@@ -27,9 +28,9 @@ export default function Property() {
                             <h2 className="infos__title">{property.title}</h2>
                             <h3 className="infos__location">{property.location}</h3>
                             <div className="infos__tags-container">
-                                <div>Tag 1</div>
-                                <div>Tag 2</div>
-                                <div>Tag 3</div>
+                                {property.tags.map((tag) => (
+                                    <PropertyTag title={tag}/>
+                                ))} 
                             </div>
                         </div>
 
@@ -38,6 +39,11 @@ export default function Property() {
                             <div className="infos__host">
                                 <h3 className="infos__host__name">{property.host.name}</h3>
                                 <img className="infos__host__picture" src={property.host.picture} alt="Profile of the host"></img>
+                            </div>
+
+                            {/* todo : rating */}
+                            <div>
+                                
                             </div>
                         </div>
                     </div>
@@ -58,10 +64,3 @@ function getPropertyIDFromUrl() {
 
     return id;
 }
-
-// async function fetchProperties() {
-//     const response = await fetch("./../datas/properties.json"); console.log(response);
-//     const ppp = await response.json(); console.log(ppp);
-
-//     return null;
-// }
