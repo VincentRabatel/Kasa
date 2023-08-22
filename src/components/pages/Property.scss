@@ -1,5 +1,61 @@
 .property-container {
     margin: auto;
+    margin-bottom: 50px;
     max-width: 1240px; 
     padding: 0px 100px 0px 100px;
+}
+
+.infos {
+    margin-top: 24px;
+
+    display: flex;
+    justify-content: space-between;
+
+    &__title {
+        margin: 0;
+        font-size: 36px;
+        font-weight: 500;
+        font-family: "Montserrat" sans-serif;
+    }
+
+    &__location {
+        margin: 0;
+        margin-top: 9px;
+
+        font-size: 18px;
+        font-weight: 500;
+        font-family: "Montserrat" sans-serif;
+    }
+
+    &__host {
+        display: flex;
+        align-items: center;
+        column-gap: 10px;
+
+        &__name {
+            font-size: 18px;
+            font-weight: 500;
+            font-family: "Montserrat" sans-serif;
+        }
+    
+        &__picture {
+            width: 64px;
+            height: 64px;
+            border-radius: 32px;
+        }
+    }
+
+    &__tags-container {
+        margin-top: 24px;
+
+        display: flex;
+        column-gap: 10px;
+    }
+}
+
+.collapses-container {
+    margin-top: 24px;
+
+    display: flex;
+    column-gap: 76px;
 }
