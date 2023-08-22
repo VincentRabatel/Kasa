@@ -10,7 +10,7 @@ import propertiesData from "../../datas/properties.json"
 export default function Property() {
 
     const id = getPropertyIDFromUrl();
-    const property = propertiesData.find((p) => p.id === id); console.log(property);
+    const property = propertiesData.find((p) => p.id === id); //console.log(property);
 
     return (
         <React.Fragment>
