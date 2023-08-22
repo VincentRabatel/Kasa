@@ -1,6 +1,7 @@
 import React from "react"
 import Header from "../Header"
 import Footer from "../Footer"
+import Slideshow from "../Slideshow"
 
 import "./Property.scss"
 
@@ -9,12 +10,14 @@ import propertiesData from "../../datas/properties.json"
 export default function Property() {
 
     const id = getPropertyIDFromUrl();
-    const property = propertiesData.find((p) => p.id === id); console.log(property)
+    const property = propertiesData.find((p) => p.id === id); console.log(property);
 
     return (
         <React.Fragment>
             <Header />
-                <main>
+                <main className="property-container">
+                    <Slideshow pictures={property.pictures} />
+
                     <h1>{property.title}</h1>
                 </main>
             <Footer />
@@ -28,3 +31,10 @@ function getPropertyIDFromUrl() {
 
     return id;
 }
+
+// async function fetchProperties() {
+//     const response = await fetch("./../datas/properties.json"); console.log(response);
+//     const ppp = await response.json(); console.log(ppp);
+
+//     return null;
+// }

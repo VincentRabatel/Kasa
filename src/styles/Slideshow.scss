@@ -1,0 +1,38 @@
+.slideshow {
+    height: 415px;
+    margin-top: 50px;
+
+    border-radius: 25px;
+    background-color: grey; //temp
+
+    position: relative;
+
+    &__picture {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 25px;
+    }
+
+    &__arrow {
+        width: 47px;
+        height: 79px;
+        
+        cursor: pointer;
+        position: absolute;
+
+        &--left {
+            top: 50%;
+            left: 23px;
+
+            transform: translate(0%, -50%) rotate(0deg);
+        }
+
+        &--right {
+            top: 50%;
+            right: 23px;
+
+            transform: translate(0%, -50%) rotate(180deg);
+        }
+    }
+}
