@@ -21,7 +21,7 @@ export default function About() {
     return (
         <React.Fragment>
             <Header />
-            <main>
+            <main className="about-container">
                 {/* Banner */}
                 <Banner image={bannerImage} text={bannerText} alt={bannerAlt} />
 

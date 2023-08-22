@@ -15,7 +15,7 @@ export default function Home() {
     return (
         <React.Fragment>
             <Header />
-            <main>
+            <main className="home-container">
                 <Banner image={bannerImage} text={bannerText} alt={bannerAlt} />
                 <Gallery />
             </main>
