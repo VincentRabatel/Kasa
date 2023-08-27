@@ -6,7 +6,7 @@ import arrow from "../assets/collapse-arrow.svg";
 export default function Collapse({title, text}) {
     const [collapseState, setCollapseState] = useState(false);
 
-    function UpdateCollapse() {
+    function updateCollapse() {
         switch(collapseState) {
             case false:
                 setCollapseState(true);
@@ -23,7 +23,7 @@ export default function Collapse({title, text}) {
 
     return (
         <div className="collapse">
-            <button className="collapse__btn" onClick={UpdateCollapse}>
+            <button className="collapse__btn" onClick={updateCollapse}>
                 <h2 className="collapse__btn__title">{title}</h2>
                 <img className={`collapse__btn__arrow ${collapseState ? "collapse__btn__arrow--open" : "collapse__btn__arrow--close"}`} src={arrow} alt =""></img>
             </button>
