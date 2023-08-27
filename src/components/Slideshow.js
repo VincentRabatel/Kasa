@@ -19,7 +19,8 @@ export default function Slideshow({pictures}) {
         <div className="slideshow">
             <img className="slideshow__arrow slideshow__arrow--left" onClick={previousSlide} src={arrow} alt="Left arrow"></img>
             <img className="slideshow__picture" src={pictures[slideshowState]} alt=""></img>
-            <img className="slideshow__arrow slideshow__arrow--right" onClick={nextSlide} src={arrow} alt="Right arrow"></img>            
+            <img className="slideshow__arrow slideshow__arrow--right" onClick={nextSlide} src={arrow} alt="Right arrow"></img>
+            <div className="slideshow__count"> {slideshowState + 1}/{pictures.length}</div>
         </div>
     )
 }

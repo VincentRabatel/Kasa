@@ -35,4 +35,16 @@
             transform: translate(0%, -50%) rotate(180deg);
         }
     }
+
+    &__count {
+        color: white;
+        font-size: 18px;
+        font-weight: 500;
+        font-family: "Montserrat", sans-serif;
+
+        position: absolute;
+        top: 90%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
 }
