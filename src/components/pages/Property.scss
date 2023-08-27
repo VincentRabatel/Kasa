@@ -27,9 +27,17 @@
         font-family: "Montserrat" sans-serif;
     }
 
+    &__tags-container {
+        margin-top: 24px;
+
+        display: flex;
+        column-gap: 10px;
+    }
+    
     &__host {
         display: flex;
         align-items: center;
+        justify-content: end;
         column-gap: 10px;
 
         &__name {
@@ -45,11 +53,8 @@
         }
     }
 
-    &__tags-container {
-        margin-top: 24px;
-
-        display: flex;
-        column-gap: 10px;
+    &__rating-container {
+        margin-top: 27px;
     }
 }
 

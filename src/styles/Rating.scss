@@ -1,0 +1,19 @@
+.rating {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    column-gap: 15px;
+    
+    &__star {
+
+        &--full {
+            font-size: 24px;
+            color: #FF6060;
+        }
+
+        &--empty {
+            font-size: 24px;
+            color: #E3E3E3;
+        }
+    }
+}

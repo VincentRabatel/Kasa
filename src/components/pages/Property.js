@@ -4,6 +4,7 @@ import Header from "../Header"
 import Footer from "../Footer"
 import Slideshow from "../Slideshow"
 import Collapse from "../Collapse"
+import Rating from "../Rating"
 
 import "./Property.scss"
 
@@ -66,9 +67,8 @@ export default function Property() {
                             <img className="infos__host__picture" src={property.host.picture} alt="Profile of the host"></img>
                         </div>
 
-                        {/* todo : rating */}
                         <div className="infos__rating-container">
-                            
+                            <Rating rating={property.rating} />
                         </div>
                     </div>
                 </div>
@@ -78,7 +78,6 @@ export default function Property() {
                     <Collapse title="Équipements" text={property.equipments}/>
                 </div>
             </main>
-        
         
             <Footer />
     </React.Fragment>

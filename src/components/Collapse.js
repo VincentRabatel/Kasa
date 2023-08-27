@@ -29,6 +29,5 @@ export default function Collapse({title, text}) {
             </button>
             <p className={`collapse__text ${collapseState ? "collapse__text--open" : "collapse__text--close"}`}>{text}</p>
         </div>
-
     )
 }
