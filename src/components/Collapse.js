@@ -3,7 +3,7 @@ import { useState } from "react";
 import "../styles/Collapse.scss";
 import arrow from "../assets/collapse-arrow.svg";
 
-export default function Collapse({title, text}) {
+export default function Collapse({title, content}) {
     const [collapseState, setCollapseState] = useState(false);
 
     function updateCollapse() {
@@ -27,7 +27,7 @@ export default function Collapse({title, text}) {
                 <h2 className="collapse__btn__title">{title}</h2>
                 <img className={`collapse__btn__arrow ${collapseState ? "collapse__btn__arrow--open" : "collapse__btn__arrow--close"}`} src={arrow} alt =""></img>
             </button>
-            <p className={`collapse__text ${collapseState ? "collapse__text--open" : "collapse__text--close"}`}>{text}</p>
+            <div className={`collapse__content ${collapseState ? "collapse__content--open" : "collapse__content--close"}`}>{content}</div>
         </div>
     )
 }

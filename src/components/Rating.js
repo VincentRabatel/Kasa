@@ -12,7 +12,11 @@ export default function Rating({rating}) {
     return (
         <div className="rating">
             {stars.map((star) => (
-                star === 1 ? <i className="fa-solid fa-star rating__star--full"></i> : <i className="fa-solid fa-star rating__star--empty"></i>
+                star === 1 ? 
+                <i key={crypto.randomUUID()} className="fa-solid fa-star rating__star--full"></i>
+                :
+                <i key={crypto.randomUUID()} className="fa-solid fa-star rating__star--empty"></i>
+
             ))} 
         </div>
     )

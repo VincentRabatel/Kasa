@@ -55,7 +55,7 @@ export default function Property() {
                         <h3 className="infos__location">{property.location}</h3>
                         <div className="infos__tags-container">
                             {property.tags.map((tag) => (
-                                <PropertyTag title={tag}/>
+                                <PropertyTag title={tag} key={crypto.randomUUID()} />
                             ))} 
                         </div>
                     </div>
@@ -74,12 +74,13 @@ export default function Property() {
                 </div>
 
                 <div className="collapses-container">
-                    <Collapse title="Description" text={property.description}/>
-                    <Collapse title="Équipements" text={
-                        property.equipments.map((equipement) => (
-                            //source : https://stackoverflow.com/questions/33381029/how-to-pass-html-tags-in-props
-                            [equipement, <br></br>]
-                        ))
+                    <Collapse title="Description" content={<p>{property.description}</p>}/>
+                    <Collapse title="Équipements" content={
+                        <ul>
+                            {property.equipments.map((equipement) => (
+                                <li key={crypto.randomUUID()}>{equipement}</li>
+                            ))}
+                        </ul>
                     }/>
                 </div>
             </main>

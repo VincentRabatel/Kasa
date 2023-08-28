@@ -48,7 +48,7 @@
     }
 
 
-    &__text {
+    &__content {
         margin: 0px;
         padding: 20px;
 
@@ -68,6 +68,23 @@
         &--close {
             //todo => fancy animation
             display: none;
+        }
+
+        & p {
+            margin: 0px;
+            font-size: 18px;
+            line-height: 142.6%;
+        }
+
+        & ul {
+            margin: 0px;
+            padding: 0px;
+        }
+        
+        & li {
+            font-size: 18px;
+            line-height: 142.6%;
+            list-style-type: none;
         }
     }
 }

@@ -27,10 +27,10 @@ export default function About() {
 
                 {/* Collapses */}
                 <div className="collapse-container">
-                    <Collapse title="Fiabilité" text={fiabilityText} />
-                    <Collapse title="Respect"   text={respectText} />
-                    <Collapse title="Service"   text={serviceText} />
-                    <Collapse title="Sécurité"  text={securityText} />
+                    <Collapse title="Fiabilité" content={<p>{fiabilityText}</p>} />
+                    <Collapse title="Respect"   content={<p>{respectText}</p>} />
+                    <Collapse title="Service"   content={<p>{serviceText}</p>} />
+                    <Collapse title="Sécurité"  content={<p>{securityText}</p>} />
                 </div>
             </main>
             <Footer />
