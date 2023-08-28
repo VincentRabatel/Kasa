@@ -1,13 +1,13 @@
 import { Fragment } from "react"
-import Header from "../Header"
-import Footer from "../Footer"
-import Banner from "../Banner"
-import Collapse from "../Collapse"
+import Header from "../components/Header"
+import Footer from "../components/Footer"
+import Banner from "../components/Banner"
+import Collapse from "../components/Collapse"
 
 import "./About.scss"
 
 // Data to setup the banner
-import bannerImage from "../../assets/banner-about.jpg"
+import bannerImage from "../assets/banner-about.jpg"
 const bannerText = ""
 const bannerAlt = "Mountains and a river in the background"
 

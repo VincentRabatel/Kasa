@@ -1,7 +1,7 @@
-import { useState } from "react";
+import "./Collapse.scss"
+import arrow from "../assets/collapse-arrow.svg"
 
-import "../styles/Collapse.scss";
-import arrow from "../assets/collapse-arrow.svg";
+import { useState } from "react"
 
 export default function Collapse({title, content}) {
     const [collapseState, setCollapseState] = useState(false);

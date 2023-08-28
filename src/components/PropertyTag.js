@@ -1,4 +1,4 @@
-import "../styles/PropertyTag.scss"
+import "./PropertyTag.scss"
 
 export default function PropertyTag({title}) {
     return (

@@ -1,6 +1,6 @@
-import { useState } from "react";
+import { useState } from "react"
 
-import "../styles/Slideshow.scss"
+import "./Slideshow.scss"
 
 import arrow from "../assets/slideshow-arrow.svg"
 

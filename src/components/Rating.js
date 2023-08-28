@@ -1,4 +1,4 @@
-import "../styles/Rating.scss";
+import "./Rating.scss"
 
 export default function Rating({rating}) {
     const stars = [];

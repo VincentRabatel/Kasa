@@ -1,4 +1,4 @@
-import "../styles/PropertyCard.scss"
+import "./PropertyCard.scss"
 
 export default function PropertyCard({id, title, picture}) {
     return (

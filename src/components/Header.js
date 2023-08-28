@@ -1,5 +1,6 @@
-import "../styles/Header.scss";
-import logo from "../assets/kasa-logo-header.svg";
+import "./Header.scss"
+
+import logo from "../assets/kasa-logo-header.svg"
 
 export default function Header() {
     return (
