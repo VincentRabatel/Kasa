@@ -24,7 +24,7 @@ export default function Property() {
         setProperty(data);
     };
     
-    
+
     useEffect(() => {
         getPropertyData(id);
     }, [id]);
@@ -75,7 +75,12 @@ export default function Property() {
 
                 <div className="collapses-container">
                     <Collapse title="Description" text={property.description}/>
-                    <Collapse title="Équipements" text={property.equipments}/>
+                    <Collapse title="Équipements" text={
+                        property.equipments.map((equipement) => (
+                            //source : https://stackoverflow.com/questions/33381029/how-to-pass-html-tags-in-props
+                            [equipement, <br></br>]
+                        ))
+                    }/>
                 </div>
             </main>
         

@@ -9,8 +9,6 @@ export default function Rating({rating}) {
         i < rating ? stars.push(1) : stars.push(0); 
     }
 
-    console.log(stars);
-
     return (
         <div className="rating">
             {stars.map((star) => (
