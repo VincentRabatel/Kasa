@@ -1,6 +1,3 @@
-
-import React from "react";
-
 import "../styles/Footer.scss";
 import logo from "../assets/kasa-logo-footer.svg";
 

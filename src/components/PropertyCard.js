@@ -1,5 +1,3 @@
-import React from "react"
-
 import "../styles/PropertyCard.scss"
 
 export default function PropertyCard({id, title, picture}) {

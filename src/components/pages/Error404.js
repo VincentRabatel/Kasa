@@ -1,4 +1,4 @@
-import React from "react"
+import { Fragment } from "react"
 import Header from "../Header"
 import Footer from "../Footer"
 
@@ -6,7 +6,7 @@ import "./Error404.scss"
 
 export default function Error404() {
     return (
-        <React.Fragment>
+        <Fragment>
             <Header />
             <main className="error-404">
                 <div className="error-404__title">404</div>
@@ -14,6 +14,6 @@ export default function Error404() {
                 <a className="error-404__link"href="./">Retourner à la page d'accueil</a>
             </main>
             <Footer />
-        </React.Fragment>
+        </Fragment>
     )
 } 

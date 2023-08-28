@@ -1,4 +1,4 @@
-import React from "react"
+import { Fragment } from "react"
 import Header from "../Header"
 import Footer from "../Footer"
 import Banner from "../Banner"
@@ -19,7 +19,7 @@ const securityText = "La sécurité est la priorité de Kasa. Aussi bien pour no
 
 export default function About() {
     return (
-        <React.Fragment>
+        <Fragment>
             <Header />
             <main className="about-container">
                 {/* Banner */}
@@ -34,6 +34,6 @@ export default function About() {
                 </div>
             </main>
             <Footer />
-        </React.Fragment>
+        </Fragment>
     )
 } 

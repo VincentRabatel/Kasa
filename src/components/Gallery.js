@@ -1,9 +1,8 @@
-import React from "react"
 import PropertyCard from "./PropertyCard";
 
-import "../styles/Gallery.scss"
+import "../styles/Gallery.scss";
 
-import propertiesData from "../datas/properties.json"
+import propertiesData from "../datas/properties.json";
 
 export default function Gallery() {
      return (

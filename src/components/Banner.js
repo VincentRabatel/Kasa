@@ -1,6 +1,4 @@
-import React from "react"
-
-import "../styles/Banner.scss"
+import "../styles/Banner.scss";
 
 export default function Banner({image, text, alt}) {
     return (

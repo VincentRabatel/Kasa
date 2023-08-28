@@ -1,5 +1,3 @@
-import React from "react"
-
 import "../styles/Rating.scss";
 
 export default function Rating({rating}) {

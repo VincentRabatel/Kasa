@@ -1,5 +1,6 @@
-import React, { useEffect, useState} from "react"
+import { Fragment, useEffect, useState} from "react"
 import { useParams} from "react-router-dom"
+
 import Header from "../Header"
 import Footer from "../Footer"
 import Slideshow from "../Slideshow"
@@ -31,18 +32,18 @@ export default function Property() {
 
     if(!property) {
         return (        
-            <React.Fragment>
-            <Header />
-            <main className="property-container">
-                <h1>Chargement ...</h1>
-            </main>
-            <Footer />
-            </React.Fragment>
+            <Fragment>
+                <Header />
+                <main className="property-container">
+                    <h1>Chargement ...</h1>
+                </main>
+                <Footer />
+            </Fragment>
         )
     }
     
     return (
-        <React.Fragment>
+        <Fragment>
             <Header />
 
             <main className="property-container">
@@ -86,7 +87,7 @@ export default function Property() {
             </main>
         
             <Footer />
-    </React.Fragment>
+    </Fragment>
     )
 }
 
