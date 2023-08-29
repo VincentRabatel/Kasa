@@ -1,3 +1,5 @@
+@import '../styles/statics';
+
 .collapse {
     width: 100%;
 
@@ -7,7 +9,7 @@
     
         border: none;
         border-radius: 10px;
-        background-color: #FF6060;
+        background-color: $bkg-color-third;
         
         display: flex;
         align-items: center;
@@ -17,24 +19,37 @@
 
         cursor: pointer;
 
-        &--open {
-            background-color: red;
-        }
-    
-        &--close {
-            background-color: #FF6060;
+        /* Responsive for mobiles */
+        @media (max-width: $breakpoint-mobile) {
+            height: 30px;
+            padding: 0px 12px 0px 12px;
+            border-radius: 5px;
         }
 
         &__title {
-            color: white;
+            color: $text-color-second;
             font-size: 24px;
             font-weight: 500;
             font-family: "Montserrat", sans-serif;
+
+            /* Responsive for mobiles */
+            @media (max-width: $breakpoint-mobile) {
+                font-size: 13px;
+            }
         }
     
         &__arrow {
+            width: 32px;
+            height: 32px;
+
             transform: rotate(0);
     
+            /* Responsive for mobiles */
+            @media (max-width: $breakpoint-mobile) {
+                width: 12px;
+                height: 9px;
+            }
+
             &--open {
                 //todo => fancy animation
                 transform: rotate(180deg);
@@ -50,13 +65,12 @@
 
     &__content {
         margin: 0px;
-        padding: 20px;
+        padding: 15px 20px 15px;
 
         border-radius: 5px;
-        background-color: #F6F6F6;
+        background-color: $bkg-color-second;
 
-        color: #FF6060; 
-        font-size: 18px;
+        color: $text-color-main; 
         font-weight: 400;
         font-family: "Montserrat", sans-serif;
 
@@ -74,6 +88,11 @@
             margin: 0px;
             font-size: 18px;
             line-height: 142.6%;
+
+            /* Responsive for mobiles */
+            @media (max-width: $breakpoint-mobile) {
+                font-size: 12px;
+            }
         }
 
         & ul {
@@ -85,6 +104,11 @@
             font-size: 18px;
             line-height: 142.6%;
             list-style-type: none;
+
+            /* Responsive for mobiles */
+            @media (max-width: $breakpoint-mobile) {
+                font-size: 12px;
+            }
         }
     }
 }
