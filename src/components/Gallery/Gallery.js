@@ -1,8 +1,8 @@
 import "./Gallery.scss"
 
-import PropertyCard from "./PropertyCard"
+import PropertyCard from "../PropertyCard/PropertyCard"
 
-import propertiesData from "../datas/properties.json"
+import propertiesData from "../../datas/properties.json"
 
 export default function Gallery() {
      return (

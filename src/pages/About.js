@@ -1,8 +1,8 @@
 import { Fragment } from "react"
-import Header from "../components/Header"
-import Footer from "../components/Footer"
-import Banner from "../components/Banner"
-import Collapse from "../components/Collapse"
+import Header from "../components/Header/Header"
+import Footer from "../components/Footer/Footer"
+import Banner from "../components/Banner/Banner"
+import Collapse from "../components/Collapse/Collapse"
 
 import "./About.scss"
 

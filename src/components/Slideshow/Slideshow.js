@@ -2,7 +2,7 @@ import { useState } from "react"
 
 import "./Slideshow.scss"
 
-import arrow from "../assets/slideshow-arrow.svg"
+import arrow from "../../assets/slideshow-arrow.svg"
 
 export default function Slideshow({pictures}) {
     const [slideshowState, setSlideshowState] = useState(0);

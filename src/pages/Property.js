@@ -1,16 +1,16 @@
 import { Fragment, useEffect, useState } from "react"
 import { useParams, Navigate } from "react-router-dom"
 
-import Header from "../components/Header"
-import Footer from "../components/Footer"
-import Slideshow from "../components/Slideshow"
-import Collapse from "../components/Collapse"
-import Rating from "../components/Rating"
+import Header from "../components/Header/Header"
+import Footer from "../components/Footer/Footer"
+import Slideshow from "../components/Slideshow/Slideshow"
+import Collapse from "../components/Collapse/Collapse"
+import Rating from "../components/Rating/Rating"
 
 import "./Property.scss"
 
 import propertiesData from "../datas/properties.json"
-import PropertyTag from "../components/PropertyTag"
+import PropertyTag from "../components/PropertyTag/PropertyTag"
 
 export default function Property() {
     const { id } = useParams(); //console.log(id)

@@ -1,22 +1,23 @@
-@import '../styles/statics';
+@import '../../styles/statics';
 
-.slideshow {
-    height: 415px;
+.banner {
+    height: 223px;
     margin-top: 50px;
+
+    position: relative;
+    text-align: center;
 
     border-radius: 25px;
     background-color: $bkg-color-third;
 
-    position: relative;
-
     /* Responsive for mobiles */
     @media (max-width: $breakpoint-mobile) {
-        height: 255px;
-        margin-top: 26px;
+        height: 111px;
+        margin-top: 27px;
         border-radius: 10px;
     }
 
-    &__picture {
+    &__img {
         width: 100%;
         height: 100%;
         object-fit: cover;
@@ -28,43 +29,43 @@
         }
     }
 
-    &__arrow {
-        width: 47px;
-        height: 79px;
-        
-        cursor: pointer;
+    &__img-overlay {
+        width: 100%;
+        height: 100%;
+
         position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+
+        opacity: 30%;
+        border-radius: 25px;
+        background-color: black;
 
         /* Responsive for mobiles */
         @media (max-width: $breakpoint-mobile) {
-            width: 24px;
-            height: 24px;
-        }
-
-        &--left {
-            top: 50%; left: 23px;
-            transform: translate(0%, -50%) rotate(0deg);
-        }
-
-        &--right {
-            top: 50%; right: 23px;
-            transform: translate(0%, -50%) rotate(180deg);
+            border-radius: 10px;
         }
     }
 
-    &__count {
+    &__txt {
+        margin: 0;
+        position: absolute;
+        top: 50%; left: 50%;
+        transform: translate(-50%, -50%);
+
         color: $text-color-second;
-        font-size: 18px;
+        font-size: 48px;
         font-weight: 500;
         font-family: "Montserrat", sans-serif;
 
-        position: absolute;
-        top: 90%; left: 50%;
-        transform: translate(-50%, -50%);
-
         /* Responsive for mobiles */
         @media (max-width: $breakpoint-mobile) {
-            display: none;
+            font-size: 24px;
+            text-align: left;
+
+            top: 50%; left: 0;
+            transform: translate(0, -50%);
+            padding: 0px 18px 0px 18px;
         }
     }
 }
