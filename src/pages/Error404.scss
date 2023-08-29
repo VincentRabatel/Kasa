@@ -1,14 +1,31 @@
+@import '../styles/statics';
+
 .error-404 {
-    color: #FF6060;
+    margin: auto;
+    max-width: 1240px;
+    padding: 0px 100px 0px 100px;
+
+    color: $text-color-main;
     text-align: center;
 
     font-family: "Montserrat", sans-serif;
+
+    /* Responsive for mobiles */
+    @media (max-width: $breakpoint-mobile) {
+        padding: 0px 20px 0px 20px;
+    }
 
     &__title {
         margin-top: 170px;
 
         font-size: 288px;
         font-weight: 700;
+
+        /* Responsive for mobiles */
+        @media (max-width: $breakpoint-mobile) {
+            margin-top: 128px;
+            font-size: 96px;
+        }
     }
 
     &__text {
@@ -16,6 +33,12 @@
 
         font-size: 36px;
         font-weight: 500;
+
+        /* Responsive for mobiles */
+        @media (max-width: $breakpoint-mobile) {
+            margin-top: 130px;
+            font-size: 18px;
+        }
     }
 
     &__link {
@@ -27,7 +50,14 @@
         font-weight: 500;
 
         &:visited {
-            color: #FF6060;
+            color: $text-color-main;
+        }
+
+        /* Responsive for mobiles */
+        @media (max-width: $breakpoint-mobile) {
+            margin-top: 124px;
+            margin-bottom: 114px;
+            font-size: 14px;
         }
     }
 }
