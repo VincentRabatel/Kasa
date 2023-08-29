@@ -1,8 +1,10 @@
+@import '../styles/statics';
+
 .gallery {
     margin-top: 44px;
     padding: 50px;
     border-radius: 25px;
-    background-color: #F6F6F6;
+    background-color: $bkg-color-second;
 
     display: flex;
     flex-wrap: wrap;
@@ -10,5 +12,12 @@
     justify-content: space-around;
 
     row-gap: 35px;
-    // column-gap: 50px;
+
+    /* Responsive for mobiles */
+    @media (max-width: $breakpoint-mobile) {
+        margin-top: 22px;
+        padding: 0px;
+        border-radius: 0px;
+        background-color: $bkg-color-main;
+    }
 }

@@ -1,12 +1,17 @@
 /// Variables ///
 
+// Backgrounds
+$bkg-color-main: #FFFFFF;
+$bkg-color-second: #E3E3E3;
+$bkg-color-third: #FF6060;
+
 // Text colors
 $text-color-main: #FF6060;
 $text-color-second: #FFFFFF;
 
 // Rating stars colors
-$star-full: #FF6060;
-$star-empty: #E3E3E3;
+$star-color-full: #FF6060;
+$star-color-empty: #E3E3E3;
 
 // Breakpoints
 $breakpoint-mobile: 767.98px;

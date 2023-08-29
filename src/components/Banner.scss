@@ -7,13 +7,16 @@
     position: relative;
     text-align: center;
 
+    border-radius: 25px;
+    background-color: $bkg-color-third;
+
     /* Responsive for mobiles */
     @media (max-width: $breakpoint-mobile) {
         height: 111px;
         margin-top: 27px;
+        border-radius: 10px;
     }
 
-    // Backgroung image
     &__img {
         width: 100%;
         height: 100%;
@@ -26,7 +29,6 @@
         }
     }
 
-    // Black overlay darkening the background image
     &__img-overlay {
         width: 100%;
         height: 100%;
@@ -45,7 +47,6 @@
         }
     }
 
-    // Text displayed over the background image 
     &__txt {
         margin: 0;
         position: absolute;
