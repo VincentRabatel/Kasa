@@ -1,3 +1,5 @@
+@import '../styles/statics';
+
 .banner {
     height: 223px;
     margin-top: 50px;
@@ -5,13 +7,26 @@
     position: relative;
     text-align: center;
 
+    /* Responsive for mobiles */
+    @media (max-width: $breakpoint-mobile) {
+        height: 111px;
+        margin-top: 27px;
+    }
+
+    // Backgroung image
     &__img {
         width: 100%;
         height: 100%;
         object-fit: cover;
         border-radius: 25px;
+
+        /* Responsive for mobiles */
+        @media (max-width: $breakpoint-mobile) {
+            border-radius: 10px;
+        }
     }
 
+    // Black overlay darkening the background image
     &__img-overlay {
         width: 100%;
         height: 100%;
@@ -23,17 +38,33 @@
         opacity: 30%;
         border-radius: 25px;
         background-color: black;
+
+        /* Responsive for mobiles */
+        @media (max-width: $breakpoint-mobile) {
+            border-radius: 10px;
+        }
     }
 
+    // Text displayed over the background image 
     &__txt {
         margin: 0;
         position: absolute;
         top: 50%; left: 50%;
         transform: translate(-50%, -50%);
 
-        color: white;
+        color: $text-color-second;
         font-size: 48px;
         font-weight: 500;
         font-family: "Montserrat", sans-serif;
+
+        /* Responsive for mobiles */
+        @media (max-width: $breakpoint-mobile) {
+            font-size: 24px;
+            text-align: left;
+
+            top: 50%; left: 0;
+            transform: translate(0, -50%);
+            padding: 0px 18px 0px 18px;
+        }
     }
 }
