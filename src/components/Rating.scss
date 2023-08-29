@@ -1,19 +1,35 @@
+@import '../styles/statics';
+
 .rating {
     display: flex;
     align-items: center;
     justify-content: end;
     column-gap: 15px;
     
-    &__star {
+    /* Responsive for mobiles */
+    @media (max-width: $breakpoint-mobile) {
+        column-gap: 6px;
+    }
 
+    &__star {
         &--full {
             font-size: 24px;
-            color: #FF6060;
+            color: $star-color-full;
+
+            /* Responsive for mobiles */
+            @media (max-width: $breakpoint-mobile) {
+                font-size: 13px;
+            }
         }
 
         &--empty {
             font-size: 24px;
-            color: #E3E3E3;
+            color: $star-color-empty;
+
+            /* Responsive for mobiles */
+            @media (max-width: $breakpoint-mobile) {
+                font-size: 13px;
+            }
         }
     }
 }

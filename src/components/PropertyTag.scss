@@ -1,3 +1,5 @@
+@import '../styles/statics';
+
 .property-tag {
     height: 25px;
     min-width: 115px;
@@ -8,12 +10,24 @@
     justify-content: center;
 
     border-radius: 10px;
-    background-color: #FF6060;
+    background-color: $bkg-color-third;
+
+    /* Responsive for mobiles */
+    @media (max-width: $breakpoint-mobile) {
+        height: 18px;
+        min-width: 84px;
+        border-radius: 5px;
+    }
 
     &__text {
-        color: white;
+        color: $text-color-second;
         font-size: 14px;
         font-weight: 500;
         font-family: "Montserrat", sans-serif;
+
+        /* Responsive for mobiles */
+        @media (max-width: $breakpoint-mobile) {
+            font-size: 10px;
+        }
     }
 }

@@ -51,7 +51,7 @@ export default function Property() {
 
                 <div className="infos">
                     {/* Left tab */}
-                    <div>
+                    <div className="infos__l-tab">
                         <h2 className="infos__title">{property.title}</h2>
                         <h3 className="infos__location">{property.location}</h3>
                         <div className="infos__tags-container">
@@ -62,7 +62,7 @@ export default function Property() {
                     </div>
 
                     {/* Right tab */}
-                    <div>
+                    <div className="infos__r-tab">
                         <div className="infos__host">
                             <h3 className="infos__host__name">{property.host.name}</h3>
                             <img className="infos__host__picture" src={property.host.picture} alt="Profile of the host"></img>

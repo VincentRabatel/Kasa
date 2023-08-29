@@ -1,8 +1,16 @@
+@import '../styles/statics';
+
 .property-container {
     margin: auto;
     margin-bottom: 50px;
     max-width: 1240px; 
     padding: 0px 100px 0px 100px;
+
+    /* Responsive for mobiles */
+    @media (max-width: $breakpoint-mobile) {
+        padding: 0px 20px 0px 20px;
+        margin-bottom: 27px;
+    }
 }
 
 .infos {
@@ -11,11 +19,23 @@
     display: flex;
     justify-content: space-between;
 
+    color: $text-color-main;
+
+    /* Responsive for mobiles */
+    @media (max-width: $breakpoint-mobile) {
+        flex-direction: column;
+    }
+
     &__title {
         margin: 0;
         font-size: 36px;
         font-weight: 500;
         font-family: "Montserrat" sans-serif;
+
+        /* Responsive for mobiles */
+        @media (max-width: $breakpoint-mobile) {
+            font-size: 18px;
+        }
     }
 
     &__location {
@@ -25,6 +45,12 @@
         font-size: 18px;
         font-weight: 500;
         font-family: "Montserrat" sans-serif;
+        
+        /* Responsive for mobiles */
+        @media (max-width: $breakpoint-mobile) {
+            font-size: 14px;
+            margin-top: 15px;
+        }    
     }
 
     &__tags-container {
@@ -32,8 +58,27 @@
 
         display: flex;
         column-gap: 10px;
+
+        /* Responsive for mobiles */
+        @media (max-width: $breakpoint-mobile) {
+            margin-top: 15px;
+        }  
     }
     
+    &__r-tab {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        /* Responsive for mobiles */
+        @media (max-width: $breakpoint-mobile) {
+            margin-top: 16px;
+
+            flex-direction: row-reverse;
+            align-items: center;
+        }  
+    }
+
     &__host {
         display: flex;
         align-items: center;
@@ -44,17 +89,34 @@
             font-size: 18px;
             font-weight: 500;
             font-family: "Montserrat" sans-serif;
+
+            /* Responsive for mobiles */
+            @media (max-width: $breakpoint-mobile) {
+                font-size: 12px;
+            }            
         }
     
         &__picture {
             width: 64px;
             height: 64px;
             border-radius: 32px;
+
+            background-color: $bkg-color-third;
+            
+            @media (max-width: $breakpoint-mobile) {
+                width: 32px;
+                height: 32px;
+                border-radius: 16px;
+            }    
         }
     }
 
     &__rating-container {
         margin-top: 27px;
+
+        @media (max-width: $breakpoint-mobile) {
+            margin-top: 0px;
+        } 
     }
 }
 
@@ -63,4 +125,11 @@
 
     display: flex;
     column-gap: 76px;
+
+    /* Responsive for mobiles */
+    @media (max-width: $breakpoint-mobile) {
+        margin-top: 13px;
+        flex-direction: column;
+        row-gap: 20px;
+    }  
 }
