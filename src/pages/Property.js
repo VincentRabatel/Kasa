@@ -1,5 +1,5 @@
-import { Fragment, useEffect, useState} from "react"
-import { useParams} from "react-router-dom"
+import { Fragment, useEffect, useState } from "react"
+import { useParams, Navigate } from "react-router-dom"
 
 import Header from "../components/Header"
 import Footer from "../components/Footer"
@@ -13,31 +13,29 @@ import propertiesData from "../datas/properties.json"
 import PropertyTag from "../components/PropertyTag"
 
 export default function Property() {
-    // const id = getPropertyIDFromUrl();
-    // const property = propertiesData.find((p) => p.id === id);
+    const { id } = useParams(); //console.log(id)
+    const property = propertiesData.find((p) => p.id === id); //console.log(property)
 
-
-    const { id } = useParams();
-
-    const [property, setProperty] = useState(null);
-    const getPropertyData = (id) => {
-        const data = propertiesData.find((p) => p.id === id);
-        setProperty(data);
-    };
+    // const { id } = useParams();
+    // const [property, setProperty] = useState(null);
+    // const getPropertyData = (id) => {
+    //     const data = propertiesData.find((p) => p.id === id);
+    //     setProperty(data);
+    // };
     
-
-    useEffect(() => {
-        getPropertyData(id);
-    }, [id]);
+    // useEffect(() => {
+    //     getPropertyData(id);
+    // }, [id]);
 
     if(!property) {
         return (        
             <Fragment>
-                <Header />
+                <Navigate to="/error" replace={true} />
+                {/* <Header />
                 <main className="property-container">
                     <h1>Chargement ...</h1>
                 </main>
-                <Footer />
+                <Footer /> */}
             </Fragment>
         )
     }
@@ -90,10 +88,3 @@ export default function Property() {
     </Fragment>
     )
 }
-
-// function getPropertyIDFromUrl() {
-//     const url = window.location.href;
-//     const id = url.slice(url.length - 8, url.length);
-
-//     return id;
-// }
