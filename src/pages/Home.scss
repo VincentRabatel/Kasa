@@ -1,7 +1,12 @@
-.home-container {
-    max-width: 1240px; 
+@import '../styles/statics';
 
+.home-container {
     margin: auto;
     margin-bottom: 50px;
     padding: 0px 100px 0px 100px;
+
+    /* Responsive for mobiles */
+    @media (max-width: $breakpoint-mobile) {
+        padding: 0px 20px 0px 20px;
+    }
 }
