@@ -1,5 +1,5 @@
 import { Fragment, useEffect, useState } from "react"
-import { useParams, Navigate } from "react-router-dom"
+import { useParams, Navigate, useNavigate } from "react-router-dom"
 
 import Header from "../components/Header/Header"
 import Footer from "../components/Footer/Footer"
@@ -13,39 +13,35 @@ import propertiesData from "../datas/properties.json"
 import PropertyTag from "../components/PropertyTag/PropertyTag"
 
 export default function Property() {
-    const { id } = useParams(); //console.log(id)
-    const property = propertiesData.find((p) => p.id === id); //console.log(property)
+    const { id } = useParams();
+    const [property, setProperty] = useState(null);
+    const [isLoading, setLoading] = useState(true);
+   
+    const isNotLoadingWithoutProperty = !property && !isLoading;
+    const isLoadingWithoutProperty = !property && isLoading;
 
-    // const { id } = useParams();
-    // const [property, setProperty] = useState(null);
-    // const getPropertyData = (id) => {
-    //     const data = propertiesData.find((p) => p.id === id);
-    //     setProperty(data);
-    // };
+    useEffect(() => {
+        const data = propertiesData.find((p) => p.id === id);
+        setProperty(data);
+        setLoading(false);
+    }, [id]);
     
-    // useEffect(() => {
-    //     getPropertyData(id);
-    // }, [id]);
+    if (isNotLoadingWithoutProperty) {
+        return <Navigate to="/error" />
+    }
 
-    if(!property) {
-        return (        
-            <Fragment>
-                <Navigate to="/error" replace={true} />
-                {/* <Header />
-                <main className="property-container">
-                    <h1>Chargement ...</h1>
-                </main>
-                <Footer /> */}
-            </Fragment>
+    if (isLoadingWithoutProperty) {
+        return (
+            <h1>Chargement</h1>
         )
     }
-    
+
     return (
         <Fragment>
             <Header />
 
             <main className="property-container">
-                <Slideshow pictures={property.pictures} />
+                <Slideshow pictures={property && property.pictures} />
 
                 <div className="infos">
                     {/* Left tab */}
