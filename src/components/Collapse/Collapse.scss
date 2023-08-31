@@ -65,27 +65,26 @@
 
     &__content {
         margin: 0px;
-        padding: 15px 20px 15px;
-
-        border-radius: 5px;
+        
+        border-radius: 0px 0px 5px 5px;
         background-color: $bkg-color-second;
 
         color: $text-color-main; 
         font-weight: 400;
         font-family: "Montserrat", sans-serif;
 
+        max-height: 0px;
+        overflow: hidden;
+        transition: max-height 0.4s ease-out;
+
         &--open {
-            //todo => fancy animation
-            display: block;
-        }
-    
-        &--close {
-            //todo => fancy animation
-            display: none;
+
+            max-height: 170px;
         }
 
         & p {
             margin: 0px;
+            padding: 15px 20px 15px 20px;
             font-size: 18px;
             line-height: 142.6%;
 
@@ -97,7 +96,7 @@
 
         & ul {
             margin: 0px;
-            padding: 0px;
+            padding: 15px 20px 15px 20px;
         }
         
         & li {
