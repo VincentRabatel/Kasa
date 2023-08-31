@@ -42,22 +42,22 @@
             width: 32px;
             height: 32px;
 
+            /* Arrow animation */
             transform: rotate(0);
-    
+            transition: transform 250ms;
+
+            &--open {
+                transform: rotate(-180deg);
+            }
+        
+            &--close {
+                transform: rotate(0deg);
+            }
+
             /* Responsive for mobiles */
             @media (max-width: $breakpoint-mobile) {
                 width: 12px;
                 height: 9px;
-            }
-
-            &--open {
-                //todo => fancy animation
-                transform: rotate(180deg);
-            }
-        
-            &--close {
-                //todo => fancy animation
-                transform: rotate(0deg);
             }
         }
     }
@@ -73,15 +73,21 @@
         font-weight: 400;
         font-family: "Montserrat", sans-serif;
 
+
+        /* Collapse content animation */
+        
+        // The tricks is is to use 'max-height' instead of 'height'
+        // because there is no transitions between heights
+
         max-height: 0px;
         overflow: hidden;
         transition: max-height 0.4s ease-out;
 
         &--open {
-
             max-height: 170px;
         }
 
+        /* Styling depending of the type of content */
         & p {
             margin: 0px;
             padding: 15px 20px 15px 20px;
